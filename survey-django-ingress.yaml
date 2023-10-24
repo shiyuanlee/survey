@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: survey-django-ingress
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: instance
+    alb.ingress.kubernetes.io/subnets: subnet-0146e67d4a38e3068, subnet-0ab26905d27c0c312
+    alb.ingress.kubernetes.io/security-groups: sg-04d13f2de3cae4c70
+    alb.ingress.kubernetes.io/manage-backend-security-group-rules: "true"
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: survey-django
+              port:
+                number: 8000  # The port your Django application is running on
