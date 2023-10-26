@@ -6,9 +6,10 @@ metadata:
     io.kompose.service: survey-celery-claim0
   name: survey-celery-claim0
 spec:
+  storageClassName: ""
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 100Mi
+      storage: 200Mi
 status: {}

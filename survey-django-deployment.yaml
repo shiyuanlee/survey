@@ -104,7 +104,7 @@ spec:
                 configMapKeyRef:
                   key: REDIS_PORT
                   name: opt-enviroments-development-env
-          image: survey_django
+          image: 363806660710.dkr.ecr.ap-southeast-1.amazonaws.com/rpp-prod-mainapp:1.1 
           name: survey-django
           ports:
             - containerPort: 8000

@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: survey-rabbitmq-claim0
   name: survey-rabbitmq-claim0
 spec:
+  storageClassName: "" 
   accessModes:
     - ReadWriteOnce
   resources:

@@ -6,6 +6,7 @@ metadata:
     io.kompose.service: survey-django-claim2
   name: survey-django-claim2
 spec:
+  storageClassName: gp2 
   accessModes:
     - ReadWriteOnce
   resources:

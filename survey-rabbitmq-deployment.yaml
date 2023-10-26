@@ -102,7 +102,7 @@ spec:
                 configMapKeyRef:
                   key: REDIS_PORT
                   name: opt-enviroments-development-env
-          image: rabbitmq:3.7.8
+          image: rabbitmq:3.7.8 
           name: survey-rabbitmq
           ports:
             - containerPort: 5672
